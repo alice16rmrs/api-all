@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\PubTmp\EFSQLScripts\api_all.Context.AllDbContext.sql" />
+</sitemanifest>

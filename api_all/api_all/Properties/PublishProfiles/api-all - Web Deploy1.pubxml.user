@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Esse arquivo é usado pelo processo de publicação/pacote do seu projeto Web. É possível personalizar o comportamento deste processo
+ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI4ZMFIqeAEq7br51lacONQAAAAACAAAAAAAQZgAAAAEAACAAAAA0zvSjLuN6dPgX4yxIB2DJAU23z2OaIX489ppd5y+iXgAAAAAOgAAAAAIAACAAAABMOGXdko8p30mx4ijvPVHlVLr8e/NKnW3SrTL9onc1zIAAAABNsj0ywyqHllw4EqhU8yL5/0/EGKLPvBTIH6jdRnZawmrX7KNF+K09AFtAqsHtUE9IUnahGAmA+ptzUKXJVUGeESZFG89sckyJ6KoWQfTT9wxcIbNOMzmFVqSPNu0lg+M+wLbe7co16gUUsyipFYmJoOgQFSC8ALJanHauz20wckAAAACQyds4oVb/MD0fQ49O+70KclAeN8J/WbWp5obrVEZ1lR4Gysx+KBCkrx449Y0yqsPk3ASI/GrQRnP2kOVaec46</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=tcp:all-service.database.windows.net,1433%3bInitial Catalog=all_bd%3bPersist Security Info=False%3bUser ID=rootall%3bPassword=Sanji%40123%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="api_all.Context.AllDbContext">
+      <Value>Server=tcp:all-service.database.windows.net,1433%3bInitial Catalog=all_bd%3bPersist Security Info=False%3bUser ID=rootall%3bPassword=Sanji%40123%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

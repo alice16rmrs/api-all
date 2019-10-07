@@ -1,0 +1,16 @@
+C:\Users\dell\source\repos\api_all\api_all\bin\Release\netcoreapp2.2\win-x86\hostpolicy.dll
+C:\Users\dell\source\repos\api_all\api_all\bin\Release\netcoreapp2.2\win-x86\hostfxr.dll
+C:\Users\dell\source\repos\api_all\api_all\bin\Release\netcoreapp2.2\win-x86\api_all.exe
+C:\Users\dell\source\repos\api_all\api_all\bin\Release\netcoreapp2.2\win-x86\api_all.deps.json
+C:\Users\dell\source\repos\api_all\api_all\bin\Release\netcoreapp2.2\win-x86\api_all.runtimeconfig.json
+C:\Users\dell\source\repos\api_all\api_all\bin\Release\netcoreapp2.2\win-x86\api_all.runtimeconfig.dev.json
+C:\Users\dell\source\repos\api_all\api_all\bin\Release\netcoreapp2.2\win-x86\api_all.dll
+C:\Users\dell\source\repos\api_all\api_all\bin\Release\netcoreapp2.2\win-x86\api_all.pdb
+C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\api_all.csproj.CoreCompileInputs.cache
+C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\api_all.RazorAssemblyInfo.cache
+C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\api_all.RazorAssemblyInfo.cs
+C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\api_all.AssemblyInfoInputs.cache
+C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\api_all.AssemblyInfo.cs
+C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\api_all.RazorTargetAssemblyInfo.cache
+C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\api_all.dll
+C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\api_all.pdb

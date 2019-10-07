@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Esse arquivo é usado pelo processo de publicação/pacote do seu projeto Web. É possível personalizar o comportamento deste processo
+ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI4ZMFIqeAEq7br51lacONQAAAAACAAAAAAAQZgAAAAEAACAAAADgeyM6+BCGg9x4rPoGkr+TQidH+AqfZijk9wl+4+v/rgAAAAAOgAAAAAIAACAAAADsqh/GMNjVTVQ+lavjGdnEG7tzqk3OmyvFdY1un2W7J4AAAADZZ7uSI4DhLvpn2bdQg0qiRTE5SaF/Ev2kOrf8sKNQoNimiQiJJqLQNVhUD7tpDA1e1O0Yc77KkwMNtlPpj5BCEy45wViJcXXLR4fDpiz+xFrRdvKa+py4icx7+ODdnwU9h7rUi3lt4crnboygaolp8/hy2/mzE8RWgJTmhbSo4UAAAAAhhEiidZmZpAvyAtGaWTmbKAXs6qccjT7nLtCcItd6H4KynKuLNVsn+0tfvItZi0X9FPKzCqqii01cehxyT7z2</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=34.68.226.142%3bDataBase=all_bd%3bUid=root%3bPwd=root</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
