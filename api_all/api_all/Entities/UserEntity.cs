@@ -50,5 +50,7 @@ namespace api_all.Entities
         [Required]
         public int Numero { get; set; }
 
+        public string Role { get; set; }
+
     }
 }

@@ -16,5 +16,6 @@ namespace api_all.Dto
         [StringLength(8, MinimumLength = 4)]
         [DataType(DataType.Password)]
         public string Senha { get; set; }
+
     }
 }

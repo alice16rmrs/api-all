@@ -14,9 +14,9 @@ namespace api_all.Repositories
         private  CarrinhoCompra _carrinhoCompra;
 
 
-        public PedidoRepository(AllDbContext appDbContext, CarrinhoCompra carrinhoCompra)
+        public PedidoRepository(AllDbContext allDbContext, CarrinhoCompra carrinhoCompra)
         {
-            _allDbContext = appDbContext;
+            _allDbContext = allDbContext;
             _carrinhoCompra = carrinhoCompra;
         }
 

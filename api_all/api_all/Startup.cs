@@ -8,15 +8,15 @@ using api_all.Entities;
 using api_all.Repositories;
 using api_all.Repositories.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Swagger;
 
@@ -28,7 +28,7 @@ namespace api_all
         {
             Configuration = configuration;
         }
-
+            
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -69,6 +69,7 @@ namespace api_all
             services.AddTransient<ILancheService, LancheService>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<ILoginService, LoginService>();
+            services.AddTransient<IPedidoRepository, PedidoRepository>();
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IUserRepository, UserRepository>();
@@ -88,7 +89,25 @@ namespace api_all
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "API ALL", Version = "v1" });
+                c.SwaggerDoc("v2", new Info { Title = "API ALL", Version = "v2" });
+                c.AddSecurityDefinition("Bearer", new ApiKeyScheme
+                {
+                    In = "header",
+                    Description = "Entre com o token",
+                    Name = "Authorization",
+                    Type = "apiKey"
+                });
+                c.AddSecurityRequirement(new Dictionary<string, IEnumerable<string>>
+                {
+                    {"Bearer", Enumerable.Empty<string>()}
+                });
+            });
+
+            services.AddAuthorization(auth =>
+            {
+                auth.AddPolicy("Bearer", new AuthorizationPolicyBuilder()
+                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme‌​)
+                    .RequireAuthenticatedUser().Build());
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -105,10 +124,11 @@ namespace api_all
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1");
+                c.SwaggerEndpoint("/swagger/v2/swagger.json", "API v2");
             });
 
             app.UseAuthentication();
+            app.UseSession();
             app.UseMvc();
         }
     }

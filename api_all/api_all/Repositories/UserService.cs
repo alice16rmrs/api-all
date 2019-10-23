@@ -30,6 +30,7 @@ namespace api_all.Repositories.Interfaces
 
         public async Task<UserEntity> Post(UserEntity user)
         {
+
             return await _repository.InsertAsync(user);
         }
 

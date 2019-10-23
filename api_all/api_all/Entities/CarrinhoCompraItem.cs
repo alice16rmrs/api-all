@@ -1,12 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace api_all.Entities
 {
-    public class CarrinhoCompraItem : BaseEntity
+    [Table("CarrinhoCompraItens")]
+    public class CarrinhoCompraItem
     {
+        public int CarrinhoCompraItemId { get; set; }
         public LancheEntity Lanche { get; set; }
         public int Quantidade { get; set; }
-        [StringLength(200)]
+        [StringLength(100)]
         public string CarrinhoCompraId { get; set; }
     }
 }

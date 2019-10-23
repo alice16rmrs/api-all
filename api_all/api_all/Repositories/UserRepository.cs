@@ -2,9 +2,6 @@
 using api_all.Entities;
 using api_all.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace api_all.Repositories

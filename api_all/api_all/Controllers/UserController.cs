@@ -1,5 +1,6 @@
 ﻿using api_all.Entities;
 using api_all.Repositories.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net;
@@ -17,7 +18,7 @@ namespace api_all.Controllers
         {
             _service = service;
         }
-
+        [Authorize(Roles = Role.Admin)]
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
@@ -35,7 +36,7 @@ namespace api_all.Controllers
             }
         }
         [HttpGet]
-        [Route("{id}", Name ="GetUserId")]
+        [Route("{Id}", Name ="GetUserId")]
         public async Task<ActionResult> Get(Guid Id)
         {
             if (!ModelState.IsValid)
@@ -61,7 +62,8 @@ namespace api_all.Controllers
             try
             {
                 var result = await _service.Post(user);
-                if(result != null)
+                
+                if (result != null)
                 {
                     //return CreatedAtRoute("GetUserId", new { id = result.Id }, result);
                     return Created(new Uri(Url.Link("GetUserId", new { id = result.Id })), result);
@@ -76,7 +78,7 @@ namespace api_all.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
-        [HttpPut("{id}")]
+        [HttpPut("{Id}")]
         public async Task<ActionResult> Put([FromBody] UserEntity user)
         {
             if (!ModelState.IsValid)
@@ -100,7 +102,8 @@ namespace api_all.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
-        [HttpDelete("{id}")]
+        [Authorize(Roles = Role.Admin)]
+        [HttpDelete("{Id}")]
         public async Task<ActionResult> Delete(Guid Id)
         {
             if (!ModelState.IsValid)

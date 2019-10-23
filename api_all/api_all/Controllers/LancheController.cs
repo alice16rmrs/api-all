@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using api_all.Entities;
 using api_all.Repositories.Interfaces;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api_all.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize(Roles = Role.Admin)]
     [ApiController]
     public class LancheController : ControllerBase
     {
@@ -20,7 +19,7 @@ namespace api_all.Controllers
         {
             _service = service;
         }
-
+        
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
@@ -38,7 +37,7 @@ namespace api_all.Controllers
             }
         }
         [HttpGet]
-        [Route("{id}", Name = "GetLancheId")]
+        [Route("{Id}", Name = "GetLancheId")]
         public async Task<ActionResult> Get(Guid Id)
         {
             if (!ModelState.IsValid)
@@ -54,6 +53,7 @@ namespace api_all.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
+        
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] LancheEntity lanche)
         {
@@ -78,7 +78,8 @@ namespace api_all.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
-        [HttpPut("{id}")]
+        
+        [HttpPut("{Id}")]
         public async Task<ActionResult> Put([FromBody] LancheEntity lanche)
         {
             if (!ModelState.IsValid)
@@ -102,7 +103,8 @@ namespace api_all.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
-        [HttpDelete("{id}")]
+        
+        [HttpDelete("{Id}")]
         public async Task<ActionResult> Delete(Guid Id)
         {
             if (!ModelState.IsValid)

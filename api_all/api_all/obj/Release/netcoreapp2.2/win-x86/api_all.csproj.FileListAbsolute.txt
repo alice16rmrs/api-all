@@ -14,3 +14,4 @@ C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\api
 C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\api_all.RazorTargetAssemblyInfo.cache
 C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\api_all.dll
 C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\api_all.pdb
+C:\Users\dell\source\repos\api_all\api_all\obj\Release\netcoreapp2.2\win-x86\api_all.csprojAssemblyReference.cache

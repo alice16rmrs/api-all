@@ -17,11 +17,12 @@ namespace api_all.Repositories
             _context = context;
         }
 
-        public IEnumerable<LancheEntity> Lanches => throw new NotImplementedException();
+        public IEnumerable<LancheEntity> Lanches => _context.Lanches;
 
         public LancheEntity GetLancheById(Guid Id)
         {
             return _context.Lanches.FirstOrDefault(l => l.Id == Id);
         }
+
     }
 }

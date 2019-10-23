@@ -22,7 +22,7 @@ namespace api_all.Repositories
             _configuration = configuration;
         }
 
-        public  async Task<object> FindByLogin(LoginDto login)
+        public async Task<object> FindByLogin(LoginDto login)
         {
             var baseUser = new UserEntity();
 
@@ -41,7 +41,8 @@ namespace api_all.Repositories
                 {
                     var claims = new[]
                     {
-                     new Claim(ClaimTypes.Name, login.Login)
+                     new Claim(ClaimTypes.Name, login.Login),
+                     new Claim(ClaimTypes.Role, baseUser.Role)
                     };
 
                     //recebe uma instancia da classe SymmetricSecurityKey 
