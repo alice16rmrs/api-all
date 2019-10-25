@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace api_all.Controllers
 {
-    [Authorize("Bearer")]
+    //[Authorize("Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     

@@ -3,11 +3,13 @@ using System.Net;
 using System.Threading.Tasks;
 using api_all.Entities;
 using api_all.Repositories.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api_all.Controllers
 {
     [Route("api/[controller]")]
+    //[Authorize(Roles = Role.Admin)]
     [ApiController]
     public class LancheController : ControllerBase
     {
@@ -19,6 +21,7 @@ namespace api_all.Controllers
         }
         
         [HttpGet]
+        //[AllowAnonymous]
         public async Task<ActionResult> GetAll()
         {
             if (!ModelState.IsValid)
@@ -35,6 +38,7 @@ namespace api_all.Controllers
             }
         }
         [HttpGet]
+       // [AllowAnonymous]
         [Route("{Id}", Name = "GetLancheId")]
         public async Task<ActionResult> Get(Guid Id)
         {

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api_all.Context
 {
-    public class AllDbContext : IdentityDbContext<IdentityUser>
+    public class AllDbContext : DbContext
     {
         public AllDbContext(DbContextOptions<AllDbContext> options) : base(options)
         { }

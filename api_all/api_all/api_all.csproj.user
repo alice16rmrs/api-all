@@ -13,6 +13,6 @@
     <GoogleAppEnginePublishPromote>True</GoogleAppEnginePublishPromote>
     <GoogleAppEnginePublishOpenWebsite>True</GoogleAppEnginePublishOpenWebsite>
     <GoogleAppEnginePublishNextVersion>v5</GoogleAppEnginePublishNextVersion>
-    <NameOfLastUsedPublishProfile>api-all - Web Deploy1</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>api-all2 - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
