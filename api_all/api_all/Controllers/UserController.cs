@@ -18,7 +18,7 @@ namespace api_all.Controllers
         {
             _service = service;
         }
-        [Authorize(Roles = Role.Admin)]
+
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
@@ -102,7 +102,7 @@ namespace api_all.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
-        [Authorize(Roles = Role.Admin)]
+
         [HttpDelete("{Id}")]
         public async Task<ActionResult> Delete(Guid Id)
         {
